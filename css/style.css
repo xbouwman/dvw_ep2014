@@ -101,8 +101,8 @@ html, body {min-height: 100%;}
 
 body {
 	background: #111;
-	margin: 0px;
-	padding: 20px 0 0 0;
+	margin: 0;
+	padding: 0;
 	line-height: 25px;	
 	
 	background: -moz-linear-gradient(top, #4e4e4e 0%, #111111 300px, #111111 100%); /* FF3.6+ */
@@ -118,13 +118,22 @@ body {
 header {
 	padding: 0;
 	width: 100%;
+ background: url(../img/bg-header.jpg) center;
+ background-size: cover;
+}
+
+header:before {
+ display: block;
+ height: 4em;
+ content: '';
 }
 
 header > hgroup {
-	background: #fff;
+ background-color: #fff;
+	background-color: rgba(255,255,255,0.7);
 	width: 856px;
 	padding: 40px 50px 25px;
-	margin: 0 auto;		
+	margin: 0 auto;
 }
 
 header h1 {
