@@ -1,12 +1,14 @@
 $("section:not('.page')").hide();
-
+var previousScroll = 0;
 $('#overlay').overlay({
 	fixed: false,
 	top: 0,
 	left: 0,
 	onClose: function(){
-		var o = this.getOverlay();		
+		var o = this.getOverlay();
 		o.find('.inner').remove();
+		location.hash = ' ';
+  $('body').scrollTo(previousScroll, {duration: 200});
 	}
 });
 
@@ -23,11 +25,12 @@ $(".standpunt a, .wepromise a, .eindoordeel td:not(':first-child') a").click(fun
 	$(t).closest('section').find('a.terug').clone().appendTo(d).click(function(e) {
 		$('#overlay').overlay().close();
 		e.preventDefault();
-		$('#overlay').scrollTop(0);
 	});
 	
 	$('#overlay').append(d);	
-	$('#overlay').overlay().load();	
+	$('#overlay').overlay().load();
+	previousScroll = $('html')[0].scrollTop;
+	$('body').scrollTo($('#overlay'), {duration: 200});
 });
 
 $("nav.sub a").click(function(e){
@@ -40,9 +43,10 @@ $("nav.sub a").click(function(e){
 	$('#overlay').find('a.terug').click(function() {
 		$('#overlay').overlay().close();
 		e.preventDefault();
-		$('#overlay').scrollTop(0);
 	});	
-	$('#overlay').overlay().load();	
+	$('#overlay').overlay().load();
+	previousScroll = $('html')[0].scrollTop;
+	$('body').scrollTo($('#overlay'), {duration: 200});
 });
 
 //table cell behaviors	
@@ -65,7 +69,7 @@ $('#overzicht td[class!=onderwerp]').bind("mouseenter",function() {
 });
 	
 //fake click to load page with relevant section open if hash in URL	
-if (document.location.hash != '') {
+if (document.location.hash != '' && document.location.hash != '# ') {
 	var targ = 'a[href*='+document.location.hash+']';
 	if($(targ).length>0) {
 		$(targ).click();				

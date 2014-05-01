@@ -121,7 +121,7 @@ header {
 
 header:before {
  display: block;
- height: 4em;
+ height: 30px;
  content: '';
 }
 
@@ -345,7 +345,7 @@ table#overzicht {
 		background: #fff;
 	}
 	
-	td.onderwerp a, tr.eindoordeel td.onderwerp a {
+	td.onderwerp a, tr.eindoordeel td.onderwerp span {
 		display: block;		
 		color: #222;
 		font-family:DINWeb-Cond, sans-serif;
@@ -356,20 +356,20 @@ table#overzicht {
 		text-indent: 0px;
 		text-decoration: none;
 	}
-	.lt-ie9 td.onderwerp a { padding: 4px 0 6px; }
+	.lt-ie9 td.onderwerp a, .lt-ie9 tr.eindoordeel td.onderwerp span { padding: 4px 0 6px; }
 		
 		tr.wepromise td.onderwerp a {		
 			font-size: 20px;
 			line-height: 25px;
 			padding: 9px 7px 1px;		
 		}
-		tr.eindoordeel td.onderwerp a {		
+		tr.eindoordeel td.onderwerp span {		
 			font-size: 26px;
 			line-height: 30px;
 			padding: 9px 7px 1px;		
 		}
 		
-			td.onderwerp a:hover, tr.eindoordeel td.onderwerp a:hover, tr.standpunt:hover td.onderwerp a {			
+			td.onderwerp a:hover, tr.eindoordeel td.onderwerp span, tr.standpunt:hover td.onderwerp a {			
 				color: #000;
 				background: #f0f0f0;			
 			}
@@ -692,13 +692,13 @@ footer .largetosti a:hover {
 
 #overlay {
 	display: none;
-	width: 696px;
 	padding: 20px 130px;
-	height: 770px; 
 	background: #fff;
+	width: 696px;
+	height: 819px;
+	overflow-y: auto;
 	top: 0 !important;
 	left: 0 !important;
-	overflow: auto;
 }
 
 #overlay h1 {
