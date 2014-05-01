@@ -470,7 +470,7 @@ nav.sub {
 	margin: 10px 0 0;
 	letter-spacing: -.03em;
 }
-.wepromise-sub {
+.wepromise-sub, #wepromise a {
  color: #1818a5 !important;
 }
 
