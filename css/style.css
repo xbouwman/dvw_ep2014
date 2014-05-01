@@ -38,9 +38,6 @@ html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10
 html, button, input, select, textarea { font-family: sans-serif; color: #222; }
 body { margin: 0; font-size: 1em; line-height: 1.4; }
 
-::-moz-selection { background: #59A618; color: #fff; text-shadow: none; }
-::selection { background: #59A618; color: #fff; text-shadow: none; }
-
 a { color: #59A618; text-decoration: none; }
 a:visited { color: #59A618; }
 a:hover { text-decoration: underline }
