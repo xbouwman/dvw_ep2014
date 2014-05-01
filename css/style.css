@@ -361,6 +361,11 @@ table#overzicht {
 	}
 	.lt-ie9 td.onderwerp a { padding: 4px 0 6px; }
 		
+		tr.wepromise td.onderwerp a {		
+			font-size: 20px;
+			line-height: 25px;
+			padding: 9px 7px 1px;		
+		}
 		tr.eindoordeel td.onderwerp a {		
 			font-size: 26px;
 			line-height: 30px;
@@ -396,7 +401,10 @@ table#overzicht {
 	td a:hover {
 		color: #fff;
 		text-decoration: none;
-	} 
+	}
+	.wepromise td.onvrij a, .wepromise td.meh a, .wepromise td.vrij a {
+		color: #fff;
+	}
 	
 	td.onvrij,
 	td.onvrij a {
@@ -440,14 +448,17 @@ table#overzicht {
 			color: #fff;
 		}
 	
-	tr.eindoordeel td {
-		border-bottom: 1px dotted #fff;
-	}
-	
-	tr.eindoordeel td.onderwerp {
-		border-bottom: 1px dotted #ccc;
-	}
-	
+ .wepromise td:first-child:before, .eindoordeel td:first-child:before {
+ display: block;
+ position: absolute;
+ width: 916px;
+ border-top: 1px dotted #ccc;
+ margin-top: -2px;
+ content: "";
+ }
+ .wepromise, .eindoordeel {
+ border-top: 3px solid #fff;
+ }
 	.eindoordeel {
 		text-transform: uppercase;
 	}

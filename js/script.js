@@ -11,7 +11,7 @@ $('#overlay').overlay({
 });
 
 
-$(".standpunt a, .eindoordeel td:not(':first-child') a").click(function(e){
+$(".standpunt a, .wepromise a, .eindoordeel td:not(':first-child') a").click(function(e){
 	
 	var d = $( '<div class="inner">' );
 	var t = $(e.target).attr('href');
