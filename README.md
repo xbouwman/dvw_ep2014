@@ -1,4 +1,2 @@
-dvw2012
+Digitale Vrijheidswijzer Europees Parlement 2014
 =======
-
-Digitale Vrijheidswijzer 2012
