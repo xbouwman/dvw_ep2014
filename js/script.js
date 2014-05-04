@@ -74,6 +74,6 @@ if (document.location.hash != '' && document.location.hash != '# ') {
 }
 
 $('body').bind('click', function(e) {
- if(e.target.tagName.toLowerCase() == 'a' && e.target.getAttribute('href').substr(0,1) == '#')
+ if(e.target.tagName.toLowerCase() == 'a' && e.target.getAttribute('href') == '#')
   e.preventDefault();
 });
