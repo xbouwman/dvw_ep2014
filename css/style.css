@@ -486,7 +486,7 @@ section dl {
 	margin: 0 0 15px 0;
 }
 
-.content aside {
+.content aside, .content blockquote {
 	background: #F0F0F0;
 	padding: 25px;
 	color: #444;
@@ -494,8 +494,16 @@ section dl {
 	line-height: 20px;
 	margin: -20px 0 0 0;
 }
+.content blockquote {
+ color: #222;
+ background: #F2F2F2;
+ font-style: italic;
+ quotes: "“" "”";
+}
+.content blockquote:before { content: open-quote; }
+.content blockquote:after { content: close-quote; }
 
-.content aside p {
+.content aside p, .content blockquote p {
 	margin: 0;
 }
 
