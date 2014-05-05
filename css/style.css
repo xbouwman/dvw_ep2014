@@ -356,7 +356,7 @@ table#overzicht {
 		text-indent: 0px;
 		text-decoration: none;
 	}
-	.lt-ie9 td.onderwerp a, .lt-ie9 tr.eindoordeel td.onderwerp span { padding: 4px 0 6px; }
+	.lt-ie9 td.onderwerp a, .lt-ie9 tr.wepromise td.onderwerp a, .lt-ie9 tr.eindoordeel td.onderwerp span { padding: 4px 0 6px; }
 		
 		tr.wepromise td.onderwerp a {		
 			font-size: 20px;
