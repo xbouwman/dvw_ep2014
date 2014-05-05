@@ -7,8 +7,11 @@ $('#overlay').overlay({
 	onClose: function(){
 		var o = this.getOverlay();
 		o.find('.inner').remove();
-		location.hash = ' ';
-  $('body').scrollTo(previousScroll, {duration: 200});
+		if(history && history.replaceState)
+			history.replaceState('', '', location.pathname);
+		else
+			location.hash = ' ';
+		$('body').scrollTo(previousScroll, {duration: 200});
 	}
 });
 
