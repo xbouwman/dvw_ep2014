@@ -753,6 +753,7 @@ footer .largetosti a:hover {
 .clearfix:after { clear: both; }
 .clearfix { *zoom: 1; }
 
+dd > p {padding-bottom: 15px; padding-top: 30px;}
 
 @media print {
   * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; }
