@@ -230,7 +230,8 @@ header nav .active a {
 .uitleg {
 	font-family: DINWeb-Cond, sans-serif;
 	font-size: 18px;
-	margin: 15px 0 0;
+	margin-top: 25px;
+	margin-left: 200px;
 }
 
 .uitleg > span {
